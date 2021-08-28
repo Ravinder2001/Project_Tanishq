@@ -18,6 +18,8 @@ app.use("/static", express.static(path.join(__dirname, "Script")))
 const homeController = require("./controllers/home.controller");
 app.use("/home",homeController);
 
+const cartController = require("./controllers/cart.controller")
+app.use("/home",cartController)
 
 app.listen("4321",async ()=>{
     await connect()
